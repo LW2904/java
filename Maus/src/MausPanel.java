@@ -19,6 +19,12 @@ public class MausPanel extends JPanel {
         add(xy);
         add(status);
 
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+        });
+
         addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
