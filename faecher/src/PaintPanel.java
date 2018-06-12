@@ -24,7 +24,7 @@ public class PaintPanel extends JPanel {
 
     public void paint(Graphics g) {
         super.paint(g);
-        
+
         g.drawImage(imgbuf, 0, 0 , null);
     }
 }
