@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class GPanel extends JPanel {
     public GPanel() {
@@ -9,7 +7,14 @@ public class GPanel extends JPanel {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paint(Graphics gOld) {
+        Graphics2D g = (Graphics2D) gOld;
+
+        g.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON
+        );
+
         g.drawRect(10, 10, 100, 100);
         g.drawRoundRect(230, 10, 100, 100, 100, 100);
 
